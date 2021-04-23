@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isLarge: Bool = true
+    var timer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        GeometryReader {
-            Circle().frame(width: isLarge ? $0.size.width : 10)
+            Circle()
+                .frame(width: isLarge ? $0.size.width : 10)
+                .onReceive(timer, perform: { _ in
+                    isLarge.toggle()
+                })
+                .animation(.easeIn(duration: 4.0))
         }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
