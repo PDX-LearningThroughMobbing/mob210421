@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isLarge: Bool = true
+
     var body: some View {
         GeometryReader {
-            Circle().frame(width:$0.size.width)
+            Circle().frame(width: isLarge ? $0.size.width : 10)
         }
     }
 }
