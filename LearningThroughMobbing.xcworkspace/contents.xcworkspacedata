@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../CircleCSV/CircleCSV.xcodeproj">
+      location = "group:CircleCSV2/CircleCSV2.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:README.md">
