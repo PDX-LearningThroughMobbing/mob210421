@@ -40,6 +40,7 @@ Project description (What we will do):
 - Also, that circle animation app can take a CSV and convert it to JSON in the backend
 - Printing is sufficient for proving the conversion, data set can be simple - 3 columns with headers, 10 rows of lorum ipsum junk
 
+
 Come up with a simple (can be done in an hour and a half) project that hits as many of those concepts as possible:
 
 
