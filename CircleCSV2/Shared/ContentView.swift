@@ -19,6 +19,9 @@ struct ContentView: View {
                     isLarge.toggle()
                 })
                 .animation(.easeIn(duration: 4.0))
+                .onAppear(perform: {
+                    let converter = CSVConverter(fileName: "JunkCSV - Sheet1")
+                })
         }
 }
 

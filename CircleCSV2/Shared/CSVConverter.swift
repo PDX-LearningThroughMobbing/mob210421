@@ -7,7 +7,17 @@
 
 import Foundation
 
-
+struct Item {
+    var name: String
+    var min: Int
+    var max: Int
+    
+    init(name: String, min: String, max: String) {
+        self.name = name
+        self.min = Int(min)!
+        self.max = Int(max)!
+    }
+}
 
 
 struct CSVConverter {
@@ -20,6 +30,9 @@ struct CSVConverter {
 
         for row in rows {
             let items: [String] = row.components(separatedBy: ",")
+            let currentItem = Item(name: items[0], min: items[1], max: items[2])
+            
+            
         }
     }
     
