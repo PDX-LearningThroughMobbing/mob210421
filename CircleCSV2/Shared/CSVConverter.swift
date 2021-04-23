@@ -9,5 +9,9 @@ import Foundation
 
 
 struct CSVConverter {
+    init(fileName : String) {
+        Bundle.main.url
+        
+    }
     
 }
