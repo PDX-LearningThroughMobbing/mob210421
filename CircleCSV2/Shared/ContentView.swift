@@ -13,7 +13,8 @@ struct ContentView: View {
 
     var body: some View {
             Circle()
-                .frame(width: isLarge ? $0.size.width : 10)
+                .scale(isLarge ? 1 : 0.5)
+//                .frame(width: isLarge ? $0.size.width : 10)
                 .onReceive(timer, perform: { _ in
                     isLarge.toggle()
                 })
