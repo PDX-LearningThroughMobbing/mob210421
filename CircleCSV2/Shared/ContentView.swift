@@ -20,7 +20,9 @@ struct ContentView: View {
                 })
                 .animation(.easeIn(duration: 4.0))
                 .onAppear(perform: {
-                    let converter = CSVConverter(fileName: "JunkCSV - Sheet1")
+//                    let converter = CSVConverter(fileName: "JunkCSV - Sheet1")
+                    let item = Item(name: "test", min: "7", max: "300")
+                    print(item?.toJSON())
                 })
         }
 }

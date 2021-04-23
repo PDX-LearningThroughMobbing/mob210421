@@ -12,10 +12,24 @@ struct Item {
     var min: Int
     var max: Int
     
-    init(name: String, min: String, max: String) {
+    init?(name: String, min: String, max: String) {
         self.name = name
-        self.min = Int(min)!
-        self.max = Int(max)!
+        guard let min = Int(min),
+              let max = Int(max) else { return nil }
+
+        self.min = min
+        self.max = max
+    }
+
+    func toJSON() -> String {
+        let json = #"""
+        {
+            "name": "\#(name)"
+
+        }
+        """#
+
+        return json
     }
 }
 
@@ -31,8 +45,6 @@ struct CSVConverter {
         for row in rows {
             let items: [String] = row.components(separatedBy: ",")
             let currentItem = Item(name: items[0], min: items[1], max: items[2])
-            
-            
         }
     }
     
