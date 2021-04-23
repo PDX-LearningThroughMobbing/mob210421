@@ -15,6 +15,8 @@
 		20061BDD26325DB7003F9655 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20061BB226325DB5003F9655 /* ContentView.swift */; };
 		20061BDE26325DB7003F9655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20061BB326325DB7003F9655 /* Assets.xcassets */; };
 		20061BDF26325DB7003F9655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20061BB326325DB7003F9655 /* Assets.xcassets */; };
+		B20F061926326A1B009A2130 /* CSVConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF945C7263265790067E4D3 /* CSVConverter.swift */; };
+		B20F061E26326A44009A2130 /* JunkCSV - Sheet1.csv in Resources */ = {isa = PBXBuildFile; fileRef = DDF945C0263265530067E4D3 /* JunkCSV - Sheet1.csv */; };
 		DDF945C1263265530067E4D3 /* JunkCSV - Sheet1.csv in Resources */ = {isa = PBXBuildFile; fileRef = DDF945C0263265530067E4D3 /* JunkCSV - Sheet1.csv */; };
 		DDF945C2263265530067E4D3 /* JunkCSV - Sheet1.csv in Resources */ = {isa = PBXBuildFile; fileRef = DDF945C0263265530067E4D3 /* JunkCSV - Sheet1.csv */; };
 		DDF945C8263265790067E4D3 /* CSVConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF945C7263265790067E4D3 /* CSVConverter.swift */; };
@@ -308,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20F061E26326A44009A2130 /* JunkCSV - Sheet1.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20061BD826325DB7003F9655 /* Tests_macOS.swift in Sources */,
+				B20F061926326A1B009A2130 /* CSVConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +534,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NQ5FBJE8P8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
@@ -554,7 +558,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NQ5FBJE8P8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
@@ -621,7 +625,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VNA55J4REY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,7 +647,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VNA55J4REY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,11 +8,19 @@
 import Foundation
 
 
+
+
 struct CSVConverter {
     init(fileName : String) {
         let url = Bundle.main.url(forResource: fileName, withExtension: "csv")!
         let str = try! String(contentsOf: url, encoding: .utf8)
-        let rows = str.components(separatedBy: .newlines)
+        let rows: [String] = str.components(separatedBy: .newlines)
+
+        print(rows)
+
+        for row in rows {
+            let items: [String] = row.components(separatedBy: ",")
+        }
     }
     
     
