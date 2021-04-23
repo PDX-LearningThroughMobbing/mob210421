@@ -33,7 +33,7 @@ Things we want to do (Capture the concepts people would like to work on or learn
 - Wireframing - Use swift to make a simple app
 - Converting CSV to JSON
 - App that cues deep breathing - animated bar that rises and falls
--  Replace with circle that expands from center to reach margins
+- Replace with circle that expands from center to reach margins
 
 Project description (What we will do):
 - SwiftUI app that shows a circle expanding with hard coded durations (4 sec up, 4 sec down)
@@ -56,4 +56,10 @@ Here is the iTunesU links with slides and materials:  https://itunes.apple.com/u
 
 Here is a link to the recent course on SwiftUI by Stanford, https://youtu.be/jbtqIBpUG7g
 
-- 100 Days of Swift/100 Days of SwiftUI
+- 100 Days of Swift/100 Days of SwiftUI - Hacking With Swift
+
+- WWDC Videos
+
+- Swift Playgrounds (iOS/Mac)
+
+- Human Resource Machine / 7 Billion Humans
