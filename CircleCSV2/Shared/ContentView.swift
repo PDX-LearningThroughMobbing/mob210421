@@ -14,15 +14,20 @@ struct ContentView: View {
     var body: some View {
             Circle()
                 .scale(isLarge ? 1 : 0.5)
-//                .frame(width: isLarge ? $0.size.width : 10)
                 .onReceive(timer, perform: { _ in
                     isLarge.toggle()
                 })
                 .animation(.easeIn(duration: 4.0))
                 .onAppear(perform: {
-//                    let converter = CSVConverter(fileName: "JunkCSV - Sheet1")
                     let item = Item(name: "test", min: "7", max: "300")
-                    print(item?.toJSON())
+                    print(item?.toJSON() ?? "N/A")
+                    
+                    do {
+                        let items = try CSVConverter.convert(fileName: "JunkCSV - Sheet1")
+                        print(items)
+                    } catch {
+                        print(error)
+                    }
                 })
         }
 }

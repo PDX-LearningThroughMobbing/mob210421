@@ -24,8 +24,9 @@ struct Item {
     func toJSON() -> String {
         let json = #"""
         {
-            "name": "\#(name)"
-
+            "name": "\#(name)",
+            "min": \#(min),
+            "max": \#(max),
         }
         """#
 
@@ -35,18 +36,23 @@ struct Item {
 
 
 struct CSVConverter {
-    init(fileName : String) {
-        let url = Bundle.main.url(forResource: fileName, withExtension: "csv")!
-        let str = try! String(contentsOf: url, encoding: .utf8)
-        let rows: [String] = str.components(separatedBy: .newlines)
-
-        print(rows)
-
-        for row in rows {
-            let items: [String] = row.components(separatedBy: ",")
-            let currentItem = Item(name: items[0], min: items[1], max: items[2])
-        }
+    enum ConvertError : Error {
+        case noFile
     }
     
-    
+    static func convert(fileName: String) throws -> [Item] {
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "csv") else {
+            throw ConvertError.noFile
+        }
+        let str = try String(contentsOf: url, encoding: .utf8)
+        let rows = str.components(separatedBy: .newlines)
+        
+        return rows.compactMap { (rowString) -> Item? in
+            let fields = rowString.components(separatedBy: ",") //important to note that this will fail with many CSV files (for example, one escaped commas). A more robust solution would be needed if one didn't have control of the input format
+            guard fields.count > 2 else {
+                return nil
+            }
+            return Item(name: fields[0], min: fields[1], max: fields[2])
+        }
+    }
 }
