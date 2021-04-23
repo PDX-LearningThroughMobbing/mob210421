@@ -10,8 +10,10 @@ import Foundation
 
 struct CSVConverter {
     init(fileName : String) {
-        Bundle.main.url
-        
+        let url = Bundle.main.url(forResource: fileName, withExtension: "csv")!
+        let str = try! String(contentsOf: url, encoding: .utf8)
+        let rows = str.components(separatedBy: .newlines)
     }
+    
     
 }
